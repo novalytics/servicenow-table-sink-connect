@@ -1,0 +1,288 @@
+{
+  "event": {
+    "time_first_received": "2025-05-05T18:41:34.074-04:00",
+    "tenant_id": "System Default Tenant",
+    "duplicate_count": 0,
+    "node_hints": {
+      "node": {
+        "type": "urn:x-hp:2009:software:data_model:opr:type:node_info",
+        "version": 1,
+        "dns_name": "app02"
+      },
+      "hint": "",
+      "type": "urn:x-hp:2009:software:data_model:opr:type:node_hints",
+      "version": 1
+    },
+    "log_only": false,
+    "annotation_count": 0,
+    "sub_category": "Event auto archiving",
+    "close_key_pattern": "^EVENT_ARCHIVING_STARTED$",
+    "instruction_available": false,
+    "description": "Archived all events received before 4/5/25 6:41 PM to opr_event_archive_2025-05-05_18-41-33-0400.zip. Number of archived events: 2.",
+    "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "type": "urn:x-hp:2009:software:data_model:opr:type:event",
+    "title": "Automatic archiving of closed events has completed successfully. Number of archived events: 2.",
+    "originating_server": {
+      "ip_address": "192.168.2.11",
+      "type": "urn:x-hp:2009:software:data_model:opr:type:node_info",
+      "version": 1,
+      "dns_name": "app02.local"
+    },
+    "xmlns": "http://www.hp.com/2009/software/opr/data_model",
+    "related_ci_hints": {
+      "hint": "@@app02",
+      "type": "urn:x-hp:2009:software:data_model:opr:type:related_ci_hints",
+      "version": 1
+    },
+    "received_as_notify": false,
+    "relationships_included": true,
+    "time_received": "2025-05-05T18:41:34.074-04:00",
+    "assigned_user": {
+      "organization_label": "",
+      "login_name": "",
+      "user_name": "",
+      "id": "00000000-0000-0000-ffff-ffffffffffff"
+    },
+    "sending_server": {
+      "ip_address": "192.168.2.11",
+      "type": "urn:x-hp:2009:software:data_model:opr:type:node_info",
+      "version": 1,
+      "dns_name": "app02.local"
+    },
+    "control_transferred_to": {
+      "display_label": "ServiceNow",
+      "initiated_by": "admin",
+      "rule_name": "__manual__",
+      "name": "ServiceNow",
+      "id": "07c1b404-199d-41df-a8c9-a503688f5897",
+      "state": "requested",
+      "type": "urn:x-hp:2009:software:data_model:opr:type:control_transfer_info",
+      "version": 1.2,
+      "dns_name": "localhost",
+      "connection_port": 8090
+    },
+    "time_created": "2025-05-05T18:41:34.074-04:00",
+    "id": "4a23db45-5663-4b8e-b563-94dc70a1b287",
+    "state": "open",
+    "key": "EVENT_ARCHIVING_SUCCESSFUL",
+    "severity": "normal",
+    "node_ref": {
+      "node": {
+        "lic_operational2advanced": false,
+        "root_candidatefordeletetime": "2025-05-25T16:33:53.857-04:00",
+        "lic_type_asset": false,
+        "lic_type_udf": false,
+        "type": [
+          "urn:x-hp:2009:software:data_model:type:node",
+          "unix"
+        ],
+        "lic_type_udi": false,
+        "display_label": "app02",
+        "data_operationstate": "0:Normal",
+        "root_actualdeletetime": "2025-06-14T16:33:53.857-04:00",
+        "processor_family": "x86_64",
+        "data_teststate": "0:Normal",
+        "id": "476f0305c93aa77b919b590b10c364db",
+        "type_label": "Unix",
+        "default_gateway_ip_address_type": "IPv4",
+        "bios_uuid": "4C4C4544-0038-5110-8033-B7C04F344732",
+        "create_time": "2025-01-30T11:00:56.461-05:00",
+        "TenantOwner": "System Default Tenant",
+        "ud_unique_id": "app02",
+        "root_lastaccesstime": "2025-05-05T16:33:53.857-04:00",
+        "version": 1.1,
+        "lic_type_operational": false,
+        "root_iscandidatefordeletion": false,
+        "data_source": "BSM: omi_config,LoggedInUser:{bsm_odb_customer_1###UCMDB}",
+        "data_testcorrstate": "0:Normal",
+        "name": "app02",
+        "is_save_persistency": false,
+        "data_adminstate": "0:Managed",
+        "lic_type_full": false,
+        "root_enableageing": false,
+        "data_updated_by": "BSM: omi_config,LoggedInUser:{bsm_odb_customer_1###UCMDB}",
+        "ip_address_list": "",
+        "os_family": "unix",
+        "discovered_os_name": "Linux Red Hat 8.10 4.18.0",
+        "data_operationisnew": false,
+        "lic_type_basic": false,
+        "root_class": "unix",
+        "TenantsUses": "System Default Tenant",
+        "lic_type_premium": false,
+        "monitored_by": "OM",
+        "data_allow_auto_discovery": true,
+        "data_changecorrstate": "0:No Change",
+        "last_modified_time": "2025-04-29T16:38:10.816-04:00",
+        "primary_dns_name": "app02",
+        "data_changestate": "0:No Change",
+        "lic_type_management": false,
+        "data_testisnew": false,
+        "data_changeisnew": false,
+        "track_changes": false,
+        "host_iscomplete": false,
+        "data_operationcorrstate": "0:Normal"
+      },
+      "target_type": "urn:x-hp:2009:software:data_model:type:unix",
+      "target_id": "476f0305c93aa77b919b590b10c364db",
+      "target_role": "urn:x-hp:2009:software:data_model:opr:relationship:event:node_ref:node",
+      "type": "urn:x-hp:2009:software:data_model:opr:type:reference:configuration_item:node_ref",
+      "version": 1
+    },
+    "related_ci": {
+      "configuration_item": {
+        "lic_operational2advanced": false,
+        "root_candidatefordeletetime": "2025-05-25T16:33:53.857-04:00",
+        "lic_type_asset": false,
+        "lic_type_udf": false,
+        "type": [
+          "urn:x-hp:2009:software:data_model:type:configuration_item",
+          "unix"
+        ],
+        "lic_type_udi": false,
+        "display_label": "app02",
+        "data_operationstate": "0:Normal",
+        "root_actualdeletetime": "2025-06-14T16:33:53.857-04:00",
+        "processor_family": "x86_64",
+        "data_teststate": "0:Normal",
+        "id": "476f0305c93aa77b919b590b10c364db",
+        "type_label": "Unix",
+        "default_gateway_ip_address_type": "IPv4",
+        "bios_uuid": "4C4C4544-0038-5110-8033-B7C04F344732",
+        "create_time": "2025-01-30T11:00:56.461-05:00",
+        "TenantOwner": "System Default Tenant",
+        "ud_unique_id": "app02",
+        "root_lastaccesstime": "2025-05-05T16:33:53.857-04:00",
+        "version": 1.2,
+        "lic_type_operational": false,
+        "root_iscandidatefordeletion": false,
+        "data_source": "BSM: omi_config,LoggedInUser:{bsm_odb_customer_1###UCMDB}",
+        "data_testcorrstate": "0:Normal",
+        "name": "app02",
+        "is_save_persistency": false,
+        "data_adminstate": "0:Managed",
+        "lic_type_full": false,
+        "root_enableageing": false,
+        "data_updated_by": "BSM: omi_config,LoggedInUser:{bsm_odb_customer_1###UCMDB}",
+        "os_family": "unix",
+        "discovered_os_name": "Linux Red Hat 8.10 4.18.0",
+        "data_operationisnew": false,
+        "lic_type_basic": false,
+        "root_class": "unix",
+        "TenantsUses": "System Default Tenant",
+        "lic_type_premium": false,
+        "monitored_by": "OM",
+        "data_allow_auto_discovery": true,
+        "data_changecorrstate": "0:No Change",
+        "last_modified_time": "2025-04-29T16:38:10.816-04:00",
+        "data_changestate": "0:No Change",
+        "primary_dns_name": "app02",
+        "lic_type_management": false,
+        "data_testisnew": false,
+        "data_changeisnew": false,
+        "track_changes": false,
+        "host_iscomplete": false,
+        "data_operationcorrstate": "0:Normal"
+      },
+      "target_type": "urn:x-hp:2009:software:data_model:type:unix",
+      "target_id": "476f0305c93aa77b919b590b10c364db",
+      "target_role": "urn:x-hp:2009:software:data_model:opr:relationship:event:related_ci:configuration_item",
+      "type": "urn:x-hp:2009:software:data_model:opr:type:reference:configuration_item:related_ci",
+      "version": 1.1
+    },
+    "ci_resolution_info": {
+      "hint_count": 1,
+      "matched_hint_count": 1,
+      "quality_metric": 100,
+      "type": "urn:x-hp:2009:software:data_model:opr:type:event:ci_resolution_info",
+      "version": 1,
+      "status": "Success: Hint \"@@app02\" resolved."
+    },
+    "drilldown_url": "https://app02.local:443/opr-web/eventDetails/app?eventId=4a23db45-5663-4b8e-b563-94dc70a1b287",
+    "custom_attribute_list": {
+      "type": "urn:x-hp:2009:software:data_model:opr:type:event:custom_attribute_list",
+      "version": 1,
+      "custom_attribute": {
+        "name": "InternalType",
+        "type": "urn:x-hp:2009:software:data_model:opr:type:event:custom_attribute",
+        "version": 1,
+        "value": "archive-completed"
+      }
+    },
+    "skip_duplicate_suppression": false,
+    "priority": "lowest",
+    "version": [
+      1.3,
+      4
+    ],
+    "time_changed": "2025-05-06T06:22:09.194-04:00",
+    "forwarding_info_list": {
+      "forwarding_info": [
+        {
+          "display_label": "ServiceNow",
+          "forwarding_type": "synchronize_and_transfer_control",
+          "rule_name": "__manual__",
+          "name": "ServiceNow",
+          "event_ref": {
+            "target_type": "urn:x-hp:2009:software:data_model:opr:type:event",
+            "target_id": "4a23db45-5663-4b8e-b563-94dc70a1b287",
+            "target_role": "urn:x-hp:2009:software:data_model:opr:relationship:event:is_related_to:event",
+            "type": "urn:x-hp:2009:software:data_model:opr:type:reference:event:event_ref",
+            "version": 1.1
+          },
+          "id": "c3e2453a-385b-4670-9e07-8321e8336de8",
+          "state": "queued",
+          "type": "urn:x-hp:2009:software:data_model:opr:type:forwarding_info",
+          "version": 1.1,
+          "connected_server_id": "07c1b404-199d-41df-a8c9-a503688f5897",
+          "queue_identifier": "localhost:manual",
+          "dns_name": "localhost"
+        },
+        {
+          "forwarding_type": "synchronize",
+          "external_id": "4a23db45-5663-4b8e-b563-94dc70a1b287",
+          "event_ref": {
+            "target_type": "urn:x-hp:2009:software:data_model:opr:type:event",
+            "target_id": "4a23db45-5663-4b8e-b563-94dc70a1b287",
+            "target_role": "urn:x-hp:2009:software:data_model:opr:relationship:event:is_related_to:event",
+            "type": "urn:x-hp:2009:software:data_model:opr:type:reference:event:event_ref",
+            "version": 1.1
+          },
+          "id": "819ada70-97a8-49b7-993a-2ee458f76717",
+          "ip_address": "192.168.2.11",
+          "state": "originated",
+          "type": "urn:x-hp:2009:software:data_model:opr:type:forwarding_info",
+          "version": 1.1,
+          "dns_name": "app02.local"
+        }
+      ],
+      "type": "urn:x-hp:2009:software:data_model:opr:type::forwarding_info_list",
+      "version": 1
+    },
+    "sequence_number": 1445,
+    "control_transferred": true,
+    "assigned_group": {
+      "organization_label": "",
+      "name": "",
+      "id": "00000000-0000-0000-ffff-ffffffffffff"
+    },
+    "sourced_from": {
+      "display_label": "app02.local",
+      "external_url": "https://app02.local:443/opr-web/eventDetails/app?eventId=4a23db45-5663-4b8e-b563-94dc70a1b287",
+      "name": "app02.local",
+      "external_id": "4a23db45-5663-4b8e-b563-94dc70a1b287",
+      "type": "urn:x-hp:2009:software:data_model:opr:type:source_info",
+      "version": 1,
+      "dns_name": "app02.local"
+    },
+    "xmlns:xs": "http://www.w3.org/2001/XMLSchema",
+    "received_on_ci_downtime": false,
+    "history_line_list_ref": {
+      "target_type": "urn:x-hp:2009:software:data_model:opr:type:event:history_line_list",
+      "target_id": "4a23db45-5663-4b8e-b563-94dc70a1b287",
+      "target_role": "urn:x-hp:2009:software:data_model:opr:relationship:event:contains:history_line_list",
+      "type": "urn:x-hp:2009:software:data_model:opr:type:reference:event:history_line_list",
+      "version": 1.1
+    },
+    "category": "Internal"
+  }
+}
