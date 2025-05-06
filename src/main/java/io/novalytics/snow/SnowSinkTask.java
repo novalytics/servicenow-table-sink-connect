@@ -31,12 +31,32 @@ public class SnowSinkTask extends SinkTask {
         try (CloseableHttpClient client = HttpClients.createDefault()) {
             for (SinkRecord record : records) {
                 try {
-                    JsonNode json = mapper.readTree(record.value().toString());
+                    String raw = record.value().toString();
+                    JsonNode root = mapper.readTree(raw);
+                    if (!root.has("event")) {
+                        log.debug("Skipping record without 'event' field at root");
+                        continue;
+                    }
+                    JsonNode json = root.path("event");
+
+                    String mappingConfig = config.getString(SnowSinkConfig.FIELD_MAPPING);
+                    Map<String, String> fieldMap = new HashMap<>();
+                    if (mappingConfig != null && !mappingConfig.isBlank()) {
+                        for (String pair : mappingConfig.split(",")) {
+                            String[] kv = pair.trim().split(":");
+                            if (kv.length == 2) {
+                                fieldMap.put(kv[0].trim(), kv[1].trim());
+                            }
+                        }
+                    }
 
                     Map<String, String> payload = new HashMap<>();
-                    payload.put("short_description", json.path("message").asText());
-                    payload.put("caller_id", json.path("user").asText());
-                    payload.put("severity", json.path("level").asText());
+                    for (Map.Entry<String, String> entry : fieldMap.entrySet()) {
+                        String value = extractValue(json, entry.getKey());
+                        if (value != null) {
+                            payload.put(entry.getValue(), value);
+                        }
+                    }
 
                     HttpPost post = new HttpPost(config.getString(SnowSinkConfig.INSTANCE_URL) +
                             "/api/now/table/" + config.getString(SnowSinkConfig.TABLE_NAME));
@@ -58,6 +78,16 @@ public class SnowSinkTask extends SinkTask {
         } catch (Exception e) {
             throw new ConnectException("Failed to create HTTP client", e);
         }
+    }
+
+    private String extractValue(JsonNode root, String dottedPath) {
+        String[] parts = dottedPath.split("\\.");
+        JsonNode current = root;
+        for (String part : parts) {
+            if (current == null) return null;
+            current = current.path(part);
+        }
+        return current.isMissingNode() ? null : current.asText();
     }
 
     private String basicAuth(String user, String pass) {
